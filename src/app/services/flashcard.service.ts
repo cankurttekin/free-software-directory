@@ -39,6 +39,17 @@ export class FlashcardService {
       platform: 'desktop',
     },
     */
+    {
+      id: '1',
+      companyName: 'Google Search',
+      description: 'Proprietary search engine owned by Google. Alternatives: DuckDuckGo, Ecosia, or Startpage.',
+      categoryId: '5',
+      platform: 'both',
+      alternatives: [
+        { name: '? DuckDuckGo', url: 'https://duckduckgo.com' },
+      ]
+    },
+
     // Productivity Software
     { 
       id: '3', 
