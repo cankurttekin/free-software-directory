@@ -31,14 +31,17 @@
             </button>
           </div>
         </div>
+        <!-- Will be added later once i have time for hakkindas-->
+        
         <div class="card-details" *ngIf="isExpanded(item.id)" [style.background-color]="getCardColor(item.id)">
+          <!--
           <div class="retro-card-header details-header">
             <span class="retro-card-label">Hakkında</span>
           </div>
           <div class="retro-card-content">
             <p>{{item.description}}</p>
           </div>
-          
+        -->
           <!-- Alternatives Section -->
           <div *ngIf="item.alternatives && item.alternatives.length > 0" class="alternatives-section">
             <div class="retro-card-header details-header">
