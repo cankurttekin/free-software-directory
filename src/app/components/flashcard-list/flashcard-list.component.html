@@ -1,0 +1,65 @@
+<div class="flashcard-items-container">
+  <!-- <h2 class="section-title retro-heading" *ngIf="flashcardItems.length > 0">OZEL MULK YAZILIMLAR ({{flashcardItems.length}})</h2> -->
+  <p class="empty-message" *ngIf="flashcardItems.length === 0">Sonuç bulunamadı</p>
+  
+  <div class="flashcard-items-grid">
+    <div 
+      *ngFor="let item of flashcardItems" 
+      class="flashcard-item-wrapper">
+      <div 
+        class="flashcard-item retro-card"
+        [class.expanded]="isExpanded(item.id)"
+        [style.background-color]="getCardColor(item.id)"
+        (click)="toggleExpand(item.id)">
+        <div class="card-header">
+          <div class="retro-card-header">
+            <span class="retro-card-label">{{ item.companyName }}</span>
+            <div class="retro-card-badge">{{item.id}}</div>
+          </div>
+          <div class="retro-card-content">
+            <div class="company-info">
+              <img *ngIf="item.logoUrl" [src]="item.logoUrl" alt="Logo" class="company-logo">
+              <div *ngIf="!item.logoUrl" class="company-initials-placeholder">
+                {{ getCompanyInitials(item.companyName) }}
+              </div>
+            </div>
+          </div>
+          <div class="retro-card-footer">
+            <button class="retro-expand-btn">
+              <mat-icon>{{ isExpanded(item.id) ? 'expand_less' : 'expand_more' }}</mat-icon>
+              {{ isExpanded(item.id) ? 'Kısa' : 'Detay' }}
+            </button>
+          </div>
+        </div>
+        <div class="card-details" *ngIf="isExpanded(item.id)" [style.background-color]="getCardColor(item.id)">
+          <div class="retro-card-header details-header">
+            <span class="retro-card-label">Hakkında</span>
+          </div>
+          <div class="retro-card-content">
+            <p>{{item.description}}</p>
+          </div>
+          
+          <!-- Alternatives Section -->
+          <div *ngIf="item.alternatives && item.alternatives.length > 0" class="alternatives-section">
+            <div class="retro-card-header details-header">
+              <span class="retro-card-label">Özgür Alternatifler</span>
+            </div>
+            <div class="alternatives-list">
+              <div *ngFor="let alt of item.alternatives" class="alternative-item">
+                <div class="alternative-name">
+                  <a [href]="alt.url" target="_blank" class="alternative-link">
+                    <mat-icon class="alt-icon">open_in_new</mat-icon>
+                    {{ alt.name }}
+                  </a>
+                </div>
+                <div *ngIf="alt.description" class="alternative-description">
+                  {{ alt.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
