@@ -7,16 +7,16 @@ import { FlashcardItem, Category } from '../models/flashcard.model';
 })
 export class FlashcardService {
   private categories: Category[] = [
-    { id: '1', name: 'İŞLETİM SİSTEMİ', description: 'Özel işletim sistemleri', icon: 'computer' },
-    { id: '2', name: 'OFİS', description: 'Ofis paketleri, metin editörleri, vb.', icon: 'description' },
-    { id: '3', name: 'GRAFİK VE SES DÜZENLEME', description: 'Grafik, video, ses düzenleme araçları', icon: 'brush' },
-    { id: '4', name: 'BULUT', description: 'Özel bulut depolama ve platformlar', icon: 'cloud' },
-    { id: '5', name: 'TARAYICI', description: 'Web tarayıcıları', icon: 'public' },
-    { id: '6', name: 'YAZILIM GELİŞTİRME', description: 'IDE ve geliştirme platformları', icon: 'code' },
-    { id: '7', name: 'SOSYAL MEDYA', description: 'Sosyal medya uygulamaları', icon: 'smartphone' },
-    { id: '8', name: 'MEDYA', description: 'Müzik ve Video oynatma araçları', icon: 'music_note' },
-    { id: '9', name: 'HARITA', description: 'Harita ve konum bilgisi', icon: 'map' },
-    { id: '10', name: 'İLETİŞİM', description: 'Sohbet ve video konferans araçları', icon: 'message' }
+    { id: '1', name: 'Operating System', description: 'Operating System', icon: 'computer' },
+    { id: '2', name: 'Office', description: 'Office', icon: 'description' },
+    { id: '3', name: 'Graphic and Audio Editing', description: 'Graphic, video, audio editing tools', icon: 'brush' },
+    { id: '4', name: 'Cloud', description: 'Private cloud storage and platforms', icon: 'cloud' },
+    { id: '5', name: 'Browser', description: 'Web browsers', icon: 'public' },
+    { id: '6', name: 'Software Development', description: 'IDE and development platforms', icon: 'code' },
+    { id: '7', name: 'Social Media', description: 'Social media applications', icon: 'smartphone' },
+    { id: '8', name: 'Media', description: 'Music and video playback tools', icon: 'music_note' },
+    { id: '9', name: 'Maps', description: 'Map and location information', icon: 'map' },
+    { id: '10', name: 'Communication', description: 'Chat and video conferencing tools', icon: 'message' }
   ];
 
   private flashcardItems: FlashcardItem[] = [
@@ -124,7 +124,6 @@ export class FlashcardService {
       companyName: 'Microsoft Edge', 
       description: 'Proprietary browser built on Chromium with Microsoft telemetry added. Alternatives: Firefox, LibreWolf, or Brave.', 
       categoryId: '5',
-      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg',
       platform: 'both',
       alternatives: [
         { name: 'Firefox', url: 'https://www.mozilla.org/firefox' },

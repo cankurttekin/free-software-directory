@@ -24,39 +24,41 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="content-container">
         <mat-card class="about-card">
           <mat-card-header>
-            <mat-card-title>Ozgur Alternatifi</mat-card-title>
+            <mat-card-title>Free Software Directory</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <p>Bu uygulama, özel mulk yazılımlarin ve ozgur alternatiflerini önermek amacıyla tasarlanmıştır. Kullanıcıların özel mulk yazılımların kısıtlayıcı özelliklerine dikkat çekmek ve bu özellikleri kısıtlayan yazılımların ozgur yazılım alternatiflerini sunmak için kullanılır.</p>
+            <p>This application is designed to raise awareness of proprietary software and its restrictive features. It aims to inform users about the limitations of proprietary software and provide free software alternatives.</p>
+            <p>Most of the software and alternatives listed here are my personal preferences and experiences. So you should not expect any liability.</p>
+            <p>If you pursue freedom, propably as you are here reading this, you should make your own research and decide if you want convinience or freedom more.</p>
             <ul>
-              <li><a href="https://www.gnu.org/proprietary/proprietary.html">GNU'nun Özel Mulk Yazılımlar Listesi</a></li>
+              <li><a href="https://www.gnu.org/proprietary/proprietary.html">GNU's List of Proprietary Software</a></li>
             </ul>
             <mat-divider></mat-divider>
-            <h3><mat-icon>info</mat-icon> Nasıl Kullanılır</h3>
+            <h3><mat-icon>info</mat-icon> How to Use</h3>
             <ul>
-              <li>Kategoriler arasında geçiş yap veya belirli yazılımları ara</li>
-              <li>Kartlar tıklayarak daha fazla ayrıntı ve ozgur yazılım alternatiflerini gör</li>
+              <li>Navigate between categories or search for specific software</li>
+              <li>Click on cards to view more details and free software alternatives</li>
             </ul>
             <mat-divider></mat-divider>
-            <h3>🄯 Lisans Bilgisi</h3>
+            <h3>🄯 License Information</h3>
             <div class="license-info">
-              <p>Bu uygulama <strong>GNU Genel Kamu Lisansı (GPL) v3</strong> altında dağıtılmaktadır.</p>
-              <p>GPL, kullanıcılara aşağıdaki özgürlükleri sağlar:</p>
+              <p>This application is distributed under the <strong>GNU General Public License (GPL) v3</strong>.</p>
+              <p>GPL provides the following freedoms:</p>
               <ul>
-                <li>Uygulamayı herhangi bir amaç için çalıştırma özgürlüğü</li>
-                <li>Uygulamanın nasıl çalıştığını inceleme ve ihtiyaçlarınıza göre değiştirme özgürlüğü</li>
-                <li>Değiştirilmiş sürümler de dahil olmak üzere uygulamayı yeniden dağıtma özgürlüğü</li>
-                <li>Uygulamayı geliştirme ve geliştirmelerinizi kamuya açma özgürlüğü</li>
+                <li>The right to run the application for any purpose</li>
+                <li>The right to examine how the application works and modify it for your needs</li>
+                <li>The right to distribute modified versions of the application</li>
+                <li>The right to develop and share improvements with the public</li>
               </ul>
-              <p>Kaynak Koduna Erişim: <a href="https://codeberg.org/cankurttekin/ozgur-yazilim-directory" target="_blank">Codeberg Repo</a></p>
+              <p>Access to Source Code: <a href="https://codeberg.org/cankurttekin/ozgur-yazilim-directory" target="_blank">Codeberg Repo</a></p>
             </div>
             <mat-divider></mat-divider>
-            <h3><mat-icon>warning</mat-icon> Haklıktan Kaçınılması</h3>
+            <h3><mat-icon>warning</mat-icon> Disclaimer</h3>
             <ul>
-              <li>Bu web sitesi sadece eğitim amacıyla hazırlanmıştır.</li>
-              <li>Hiçbir şirketi boykot etmeyi teşvik etmiyoruz, ancak özellikle özel mulkyazılımların kısıtlamaları hakkında bilgi vermeyi amaçlıyoruz.</li>
-              <li>Herhangi bir yazılımı kullanıp kullanmayacağınız tamamen size aittir.</li>
-              <li>Hataları düzeltmek veya güncellemek için yukarıdaki Codeberg Reposunu veya GitHub yansisini kullanabilirsiniz.</li>
+              <li>This website is only for educational purposes.</li>
+              <li>We do not encourage boycotting any company, but we aim to provide information about the limitations of proprietary software.</li>
+              <li>Whether you use the software or not is entirely up to you.</li>
+              <li>You can use the above Codeberg or GitHub repository to fix bugs or update the application.</li>
             </ul>
             <mat-divider></mat-divider>
           </mat-card-content>
@@ -146,7 +148,6 @@ export class AboutComponent {
   constructor() { }
   
   handleToggleCategories(): void {
-    // Navigate to home page to show categories
     this.router.navigate(['/']);
   }
 } 

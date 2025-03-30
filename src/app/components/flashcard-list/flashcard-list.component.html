@@ -31,7 +31,7 @@
             </button>
           </div>
         </div>
-        <!-- Will be added later once i have time for hakkindas-->
+        <!-- Will be added later once i have time for about section-->
         
         <div class="card-details" *ngIf="isExpanded(item.id)" [style.background-color]="getCardColor(item.id)">
           <!--
@@ -45,7 +45,7 @@
           <!-- Alternatives Section -->
           <div *ngIf="item.alternatives && item.alternatives.length > 0" class="alternatives-section">
             <div class="retro-card-header details-header">
-              <span class="retro-card-label">Özgür Alternatifler</span>
+              <span class="retro-card-label">Free Alternatives</span>
             </div>
             <div class="alternatives-list">
               <div *ngFor="let alt of item.alternatives" class="alternative-item">

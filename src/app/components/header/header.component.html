@@ -47,19 +47,19 @@
         </svg>
       </div>
       <div class="retro-text-container">
-        <span class="app-title" [class.mobile-title]="isMobile">Ozgur</span>
-        <span class="app-subtitle" [class.mobile-subtitle]="isMobile">Alternatifi</span>
+        <span class="app-title" [class.mobile-title]="isMobile">Free Software</span>
+        <span class="app-subtitle" [class.mobile-subtitle]="isMobile">Directory</span>
       </div>
     </div>
   </div>
   
   <div class="search-container">
     <mat-form-field appearance="outline" class="retro-search">
-      <mat-label>Ozel Mulk Yazilim Ara</mat-label>
+      <mat-label>Proprietary Software Search</mat-label>
       <input matInput 
         type="text" 
         [(ngModel)]="searchQuery" 
-        placeholder="Ozel Mulk Yazilim Ara..."
+        placeholder="Proprietary Software Search..."
         (input)="onSearchInput()"
         (keydown.enter)="onSearch()">
       <button 
@@ -83,23 +83,23 @@
   <div class="actions">
     <button mat-button class="retro-button" (click)="goHome()">
       <mat-icon aria-hidden="false" aria-label="Home icon">home</mat-icon>
-      <span class="nav-label">Ana Sayfa</span>
+      <span class="nav-label">Home</span>
     </button>
     <button mat-button class="retro-button" (click)="goDesktop()">
       <mat-icon aria-hidden="false" aria-label="Desktop icon">computer</mat-icon>
-      <span class="nav-label">Masaüstü</span>
+      <span class="nav-label">Desktop</span>
     </button>
     <button mat-button class="retro-button" (click)="goMobile()">
       <mat-icon aria-hidden="false" aria-label="Mobile icon">smartphone</mat-icon>
-      <span class="nav-label">Mobil</span>
+      <span class="nav-label">Mobile</span>
     </button>
     <button mat-button class="retro-button" (click)="toggleCategories()" *ngIf="isMobile">
       <mat-icon aria-hidden="false" aria-label="Categories icon">category</mat-icon>
-      <span class="nav-label">Kategoriler</span>
+      <span class="nav-label">Categories</span>
     </button>
     <button mat-button class="retro-button" (click)="goAbout()">
       <mat-icon aria-hidden="false" aria-label="About icon">info</mat-icon>
-      <span class="nav-label">Hakkında</span>
+      <span class="nav-label">About</span>
     </button>
   </div>
 </mat-toolbar> 
